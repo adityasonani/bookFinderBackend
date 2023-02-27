@@ -1,0 +1,53 @@
+const mongoose = require('mongoose');
+
+const bookSchema = new mongoose.Schema({
+  Category: String,
+  SubCategory: String,
+  Title: String,
+  BSRRanking: String,
+  BSRCategory: String,
+  OtherRankCategory1: String,
+  Category1ranking: String,
+  OtherRankCategory2: String,
+  Category2ranking: String,
+  OtherRankCategory3: String,
+  Category3ranking: String,
+  FrequentlyBoughtTogether: String,
+  Author: String,
+  URLTitle: String,
+  Paperback: {
+    HardcoverPrice: String,
+  },
+  Publisher: String,
+  ASIN: String,
+  Language: String,
+  Pages: String,
+  ISBN10: String,
+  ISBN13: String,
+  ItemWeight: String,
+  Dimensions: String,
+  ReadingAge: String,
+  NumberOfRatings: String,
+  FiveStarRating: String,
+  FourStarRating: String,
+  ThreeStarRating: String,
+  TwoStarRating: String,
+  OneStarRating: String,
+  RatingOutOf5Stars: String,
+  BookOptionCategory1: String,
+  BookOptionPrice1: String,
+  BookOptionCategory2: String,
+  BookOptionPrice2: String,
+  BookOptionCategory3: String,
+  BookOptionPrice3: String,
+  BookOptionCategory4: String,
+  BookOptionPrice4: String,
+  BookOptionCategory5: String,
+  BookOptionPrice5: String,
+  BookOptionCategory6: String,
+  BookOptionPrice6: String,
+});
+
+const Book = mongoose.model('Book', bookSchema);
+
+module.exports = Book;
