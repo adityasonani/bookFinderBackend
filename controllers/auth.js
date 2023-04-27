@@ -13,7 +13,7 @@ exports.signup = (req, res) => {
       error: errors.array()[0].msg
     });
   }
-
+  console.log(new User(req.body));
   const user = new User(req.body);
   user.save((err, user) => {
     if (err) {
@@ -74,7 +74,7 @@ exports.signout = (req, res) => {
 
 //protected routes
 exports.isSignedIn = expressJwt({
-  secret: process.env.SECRET,
+  secret: "learncodeonline",
   userProperty: "auth",
   algorithms: ["HS256"]
 })
